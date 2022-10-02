@@ -10,7 +10,7 @@ function formatTime(date) {
   const seconds = date.getSeconds();
   const isAm = date.getHours() < 12;
 
-  return `${hours12.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
+  return `${hours12.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${isAm ? "AM" : "PM"} EST`;
 }
 
 /**
