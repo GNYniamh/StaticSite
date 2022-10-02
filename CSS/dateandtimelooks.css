@@ -1,0 +1,25 @@
+body {
+    background: #ffffff;
+  }
+  
+  .datetime {
+    font-size: 10.5px;
+    padding: 24px;
+    color: #ffffff;
+    background: #343A40;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    width: 300px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .time {
+    font-size: 3em;
+    color: #ffffff;
+  }
+  
+  .date {
+    margin-top: 12px;
+    font-size: 2.25em;
+  }
