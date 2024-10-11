@@ -15,25 +15,35 @@
 
   <!-- Custom CSS -->
   <style>
+    <style>
     body {
-      background-image: url('https://media.thebump.com/wp-content/uploads/2022/03/07165330/Squishmallows-background.jpg');
+      background: url('https://i.pinimg.com/originals/24/0d/7e/240d7e9d89adad396b5d850f21b87097.png') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
       height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      font-family: 'Lobster', cursive;
       margin: 0;
       padding: 0;
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      position: relative;
+      cursor: url('https://target.scene7.com/is/image/Target/GUEST_0e227827-b359-4a59-9e75-613f45ce237b?wid=488&hei=488&fmt=pjpeg'), auto;
     }
 
+    /* Semi-transparent background overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: -1;
+    }
+
+    /* Rainbow Gradient Text */
     h1, ul, p, .navbar-brand, .navbar-nav .nav-link {
-      background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
       -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
     }
@@ -56,13 +66,12 @@
       margin: 10px 0;
     }
 
+    /* Date and Time Positioning at top right */
     .datetime {
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      text-align: center;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #000;
       font-size: 1.5rem;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
@@ -77,10 +86,9 @@
 
     iframe {
       display: block;
-      margin: 0 auto;
-      margin-bottom: 20px;
+      margin: 50px auto 20px auto;
     }
-  </style>
+</style>
 
   <!-- JavaScript for date and time -->
   <script>
@@ -135,6 +143,12 @@
     </div>
   </nav>
 
+  <!-- Date and Time (Top Right) -->
+  <div class="datetime">
+    <div class="time"></div>
+    <div class="date"></div>
+  </div>
+
   <!-- Content -->
   <div id="introduction">
     <h1>Different kinds of Squishmallows</h1>
@@ -147,12 +161,6 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/1ilNH7PKHxw" title="YouTube video player"
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
-  </div>
-
-  <!-- Date and Time -->
-  <div class="datetime">
-    <div class="time"></div>
-    <div class="date"></div>
   </div>
 
   <!-- Optional JavaScript -->
