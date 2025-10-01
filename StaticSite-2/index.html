@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Static Site-2</title>
+
+  <style>
+    html, body {
+      height: 100%;
+      background-color: #000; 
+      color: #00ff00;     
+      font-weight: 700;      
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      padding-top: 70px;
+    }
+
+    .navbar-custom {
+      background-color: #6c757d;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-toggler-icon {
+      color: #00ff00 !important;
+      font-weight: 700;
+    }
+
+    .navbar-custom .navbar-toggler {
+      border-color: rgba(0,0,0,0.1);
+    }
+    .navbar-custom .navbar-toggler .icon-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      margin: 4px 0;
+      background-color: #00ff00;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      font-size: 1.25rem;
+    }
+
+    ul li {
+      margin: .5rem 0;
+    }
+
+    .datetime {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      text-align: right;
+      font-size: 1rem;
+    }
+
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    iframe {
+      max-width: 100%;
+    }
+
+    #introduction {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .nav-link.active {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    function updateTime() {
+      const timeEl = document.querySelector('.time');
+      const dateEl = document.querySelector('.date');
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      const timeString = `${hours}:${minutes}:${seconds}`;
+      const dateString = now.toLocaleDateString();
+      if (timeEl) timeEl.textContent = timeString;
+      if (dateEl) dateEl.textContent = dateString;
+    }
+
+    setInterval(updateTime, 1000);
+    window.onload = updateTime;
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-custom fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="https://64.media.tumblr.com/d85056c4aca1d3d480ae4f45c00296dc/c7361389f5f91f25-52/s640x960/61fab0f9138d914bf01cdbd4ff636c6fd2aaa7f3.pnj"
+        width="30" height="30" class="d-inline-block align-top" alt="StaticSite-2">
+      Static Site-2
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar" aria-hidden="true"></span>
+      <span class="icon-bar" aria-hidden="true"></span>
+      <span class="icon-bar" aria-hidden="true"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="datetime">
+    <div class="time"></div>
+    <div class="date"></div>
+  </div>
+
+  <div id="introduction">
+    <h1>Sample List</h1>
+
+    <ul>
+      <li>Black cat</li>
+      <li>Purple squid</li>
+      <li>Blue lantern fish</li>
+      <li>Red panda</li>
+    </ul>
+
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1ilNH7PKHxw" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
